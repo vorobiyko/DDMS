@@ -1,6 +1,5 @@
 xmlport 50101 DevelopmentDBExport
-{
-   
+{ 
     schema
     {
         textelement(NodeName1)
@@ -17,34 +16,6 @@ xmlport 50101 DevelopmentDBExport
                 fieldattribute(Version; NodeName2.Version){}
                 fieldattribute(Path; NodeName2.Path){}
                 fieldattribute(Administrator; NodeName2.Administrator){}
-            }
-        }
-    }
-    
-    requestpage
-    {
-        // layout
-        // {
-        //     area(content)
-        //     {
-        //         group(GroupName)
-        //         {
-        //             field(Name; SourceExpression)
-        //             {
-                        
-        //             }
-        //         }
-        //     }
-        // }
-    
-        actions
-        {
-            area(processing)
-            {
-                action(ActionName)
-                {
-                    
-                }
             }
         }
     }

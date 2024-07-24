@@ -6,6 +6,7 @@ page 50101 "Administrator List View"
     SourceTable = "Development DB Admin";
     CardPageId = "Administrator List Create";
     Caption = 'Administrator List View';
+    Editable = false;
     
     layout
     {
@@ -23,22 +24,6 @@ page 50101 "Administrator List View"
         area(Factboxes)
         {
             
-        }
-    }
-    
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-                
-                trigger OnAction()
-                begin
-                    
-                end;
-            }
         }
     }
     internal procedure SetFilterAdminAccess(var AdminRight: Option)

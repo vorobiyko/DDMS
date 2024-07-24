@@ -44,7 +44,4 @@ page 50102 "Administrator List Create"
             }
         }
     }
-    
-    var
-        myInt: Integer;
 }

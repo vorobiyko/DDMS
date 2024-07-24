@@ -6,6 +6,7 @@ page 50104 "Development DB List View"
     SourceTable = "Development DB";
     Caption = 'Development DB List View';
     CardPageId = "Development DB Create";
+    Editable = false;
 
     layout
     {
