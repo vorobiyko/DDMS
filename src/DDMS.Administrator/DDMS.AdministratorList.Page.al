@@ -21,10 +21,6 @@ page 50101 "Administrator List View"
                 field(UserID; Rec.UserIdentifier){}
             }
         }
-        area(Factboxes)
-        {
-            
-        }
     }
     internal procedure SetFilterAdminAccess(var AdminRight: Option)
     begin

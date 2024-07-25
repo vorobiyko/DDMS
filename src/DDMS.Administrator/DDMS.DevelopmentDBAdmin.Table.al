@@ -24,7 +24,6 @@ table 50101 "Development DB Admin"
         field(5;UserIdentifier; Code[50]){
             Caption = 'User Id';
         }
-        
     }
     
     keys
@@ -35,7 +34,7 @@ table 50101 "Development DB Admin"
         }
     }
     fieldgroups{
-         fieldgroup(DropDown; Code, Rights){}
+         fieldgroup(DropDown; Code, ContactCode,Rights){}
     }
     var
         TodayDate: Date;
