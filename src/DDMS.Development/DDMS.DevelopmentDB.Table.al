@@ -23,6 +23,7 @@ table 50102 "Development DB"
         {
             Caption = 'Customer Name';
             FieldClass = FlowField;
+            Editable = false;
             CalcFormula = lookup(Customer.Name where("No." = field("Customer No.")));
         }
         field(5;"Version"; Option)
