@@ -1,34 +1,34 @@
-report 50101 "Development DB List Statistics"
+report 50101 "DDMS Dev DB Stats"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    DefaultRenderingLayout = DevDBLayout;
-    Caption = 'Development DB List Statistics';
-    
+    DefaultRenderingLayout = "Dev DB Layout";
+    Caption = 'DDMS Dev DB Stats';
+
     dataset
     {
-        dataitem("Development DB"; "Development DB")
+        dataitem("DDMS Dev DB"; "DDMS Dev DB")
         {
-            column(User; UserID){}
-            column(Date; Today){}
-            column(Code; Code){}
-            column(Description; Description){}
-            column(Version; Version){}
-            column(Path; Path){}
+            column(User; UserID) { }
+            column(Date; Today) { }
+            column(Code; Code) { }
+            column(Description; Description) { }
+            column(Version; Version) { }
+            column(Path; Path) { }
             column(CustomerName; "Customer Name")
             {
                 AutoCalcField = true;
             }
             trigger OnPreDataItem()
             begin
-                "Development DB".SetCurrentKey("Customer No.");
+                "DDMS Dev DB".SetCurrentKey("Customer No.");
             end;
         }
     }
-    
-     rendering
+
+    rendering
     {
-        layout(DevDBLayout)
+        layout("Dev DB Layout")
         {
             Type = RDLC;
             LayoutFile = './mySpreadsheet.rdl';

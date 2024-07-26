@@ -1,9 +1,9 @@
-page 50102 "Administrator List Create"
+page 50102 "DDMS Dev DB Admin Card"
 {
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "Development DB Admin";
+    SourceTable = "DDMS Dev DB Admin";
     Caption = 'Administrator List Create';
 
     layout
@@ -12,7 +12,7 @@ page 50102 "Administrator List Create"
         {
             group(CreateList)
             {
-                field(ContactCode; Rec.ContactCode)
+                field("Contact Code"; Rec."Contact Code")
                 {
                     NotBlank = true;
                 }
@@ -23,19 +23,21 @@ page 50102 "Administrator List Create"
             }
         }
     }
-    
+
     actions
     {
         area(Creation)
         {
-            action("Check DBs Access"){
+            action("Check DBs Access")
+            {
                 Promoted = true;
                 PromotedCategory = Process;
                 Image = AbsenceCategories;
                 ApplicationArea = All;
 
                 trigger OnAction()
-                var AdminDB: Page "Administrator List View";
+                var
+                    AdminDB: Page "DDMS Dev DB Admin List";
                 begin
                     AdminDB.Editable(false);
                     AdminDB.SetFilterAdminAccess(Rec.Rights);
